@@ -13,10 +13,10 @@ public class TimeDate {
 		String time = "";
 		SimpleDateFormat d = new SimpleDateFormat("yyyy-MM-dd");
 		try {
-			Date fechaInicio = d.parse(date);
-			Date fechaActual = new Date(System.currentTimeMillis());
+			Date dateStart = d.parse(date);
+			Date dateToday = new Date(System.currentTimeMillis());
 			int milisByDay = 86400000;
-			int dias = (int) ((fechaActual.getTime()- fechaInicio.getTime()) / milisByDay);
+			int dias = (int) ((dateToday.getTime()- dateStart.getTime()) / milisByDay);
 			time = dias + " día(s)";
 		} catch (ParseException e) {
 			
